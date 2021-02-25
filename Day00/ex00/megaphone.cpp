@@ -6,14 +6,12 @@
 /*   By: manaccac <manaccac@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 08:21:45 by manaccac          #+#    #+#             */
-/*   Updated: 2021/02/24 12:25:45 by manaccac         ###   ########lyon.fr   */
+/*   Updated: 2021/02/24 16:01:03 by manaccac         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <ctype.h>
-
-using namespace std;
 
 int main(int argc, char **argv)
 {
