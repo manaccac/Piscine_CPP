@@ -7,9 +7,7 @@
 #include <regex>
 #include <algorithm>
 
-# define reg_isalnum(s) (std::regex_match(s, std::regex("[a-zA-Z0-9- ]+")))
 # define reg_isalnum_sup(s) (std::regex_match(s, std::regex("[a-zA-Z0-9 ',.?!-]+")))
-# define reg_isalpha(s) (std::regex_match(s, std::regex("[a-zA-Z ]+")))
 # define reg_isnum(s) (std::regex_match(s, std::regex("[0-9 ]+")))
 # define reg_isemail(s) (std::regex_match(s, std::regex("[a-zA-Z0-9. @-]+")))
 # define reg_isbirthday(s) (std::regex_match(s, std::regex("[0-9/. ]+")))

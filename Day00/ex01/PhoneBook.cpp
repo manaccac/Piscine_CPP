@@ -9,110 +9,167 @@ PhoneBook::~PhoneBook(void)
 
 int			PhoneBook::setfirst_name(std::string str)
 {
-	if (reg_isalpha(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_first_name = str;
-		return (1);
+		if (std::isalpha(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_first_name = str;
+			return (1);
+		}
 	}
+	std::cout << "SLT" << std::endl;
 	return (0);
 }
 
 int			PhoneBook::setlast_name(std::string str)
 {
-	if (reg_isalpha(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_last_name = str;
-		return (1);
+		if (std::isalpha(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_last_name = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setnickname(std::string str)
 {
-	if (reg_isalnum(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_nickname = str;
-		return (1);
+		if (std::isalpha(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_nickname = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setlogin(std::string str)
 {
-	if (reg_isalpha(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_login = str;
-		return (1);
+		if (std::isalnum(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_login = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setpostal_address(std::string str)
 {
-	if (reg_isalnum_sup(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_postal_address = str;
-		return (1);
+		if (std::isalnum(str[i]) != 1 && str[i] != ' ' && str[i] != '-' &&
+			str[i] != '\'' && str[i] != ',')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_postal_address = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setemail_address(std::string str)
 {
-	if (reg_isemail(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_email_address = str;
-		return (1);
+		if (std::isprint(str[i]) != 1)
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_email_address = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setphone_number(std::string str)
 {
-	if (reg_isnum(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_phone_number = str;
-		return (1);
+		if (std::isdigit(str[i]) != 1 && str[i] != ' ')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_phone_number = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setbirthday_date(std::string str)
 {
-	if (reg_isbirthday(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_birthday_date = str;
-		return (1);
+		if (std::isdigit(str[i]) != 1 && str[i] != ' ' && str[i] != '/' && str[i] != '.')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_birthday_date = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setfavorite_meal(std::string str)
 {
-	if (reg_isalpha(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_favorite_meal = str;
-		return (1);
+		if (std::isalpha(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_favorite_meal = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setunderwear_color(std::string str)
 {
-	if (reg_isalpha(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_underwear_color = str;
-		return (1);
+		if (std::isalpha(str[i]) != 1 && str[i] != ' ' && str[i] != '-')
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_underwear_color = str;
+			return (1);
+		}
 	}
 	return (0);
 }
 
 int			PhoneBook::setdarkest_secret(std::string str)
 {
-	if (reg_isalnum_sup(str))
+	for (int i = 0; str[i]; i++)
 	{
-		this->_darkest_secret = str;
-		return (1);
+		if (std::isprint(str[i]) != 1)
+			return (0);
+		if (i + 1 == str.size())
+		{
+			this->_darkest_secret = str;
+			return (1);
+		}
 	}
 	return (0);
 }
