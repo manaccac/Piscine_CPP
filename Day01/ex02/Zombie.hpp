@@ -8,16 +8,12 @@
 class Zombie
 {
 public:
-	Zombie(std::string s_name, std::string s_type);
+	Zombie();
 	~Zombie();
 
-	void advret();
-	
 	void	set_name(std::string s_name);
 	void	set_type(std::string s_type);
-
-	std::string	get_name();
-	std::string get_type();
+	void advret();
 
 private:
 	std::string name;
