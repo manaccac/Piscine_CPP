@@ -1,30 +1,22 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string s_name) : _Name(s_name)
+FragTrap::FragTrap(std::string s_name) : ClapTrap(s_name, 100, 100, 100, 100, 1, 30, 20, 5)
 {
-	srand (time(NULL));
-	_Hit_points = 100;
-	_Max_hit_points = 100;
-	_Energy_points = 100;
-	_Max_energy_points = 100;
-	_Level = 1;
-	_M_attack_damage = 30;
-	_R_attack_damage = 20;
-	_A_damage_reduction = 5;
 	std::cout << "FragTrap creat" << std::endl << "Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &F_Trap) : _Name(F_Trap._Name)
+FragTrap::FragTrap(FragTrap const &F_Trap) : ClapTrap(
+	F_Trap._Name,
+	F_Trap._Hit_points,
+	F_Trap._Max_hit_points,
+	F_Trap._Energy_points,
+	F_Trap._Max_energy_points,
+	F_Trap._Level,
+	F_Trap._M_attack_damage,
+	F_Trap._R_attack_damage,
+	F_Trap._A_damage_reduction)
 {
 	srand (time(NULL));
-	_Hit_points = F_Trap._Hit_points;
-	_Max_hit_points = F_Trap._Max_hit_points;
-	_Energy_points = F_Trap._Energy_points;
-	_Max_energy_points = F_Trap._Max_energy_points;
-	_Level = F_Trap._Level;
-	_M_attack_damage = F_Trap._M_attack_damage;
-	_R_attack_damage = F_Trap._R_attack_damage;
-	_A_damage_reduction = F_Trap._A_damage_reduction;
 	std::cout << "FragTrap copy" << std::endl << "Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 }
 
@@ -46,47 +38,6 @@ FragTrap &FragTrap::operator=(FragTrap const &F_Trap)
 FragTrap::~FragTrap()
 {
 	std::cout << "I'M DEAD I'M DEAD OHMYGOD I'M DEAD!" << std::endl;
-}
-
-void	FragTrap::rangedAttack(std::string const & target)
-{
-	std::cout << "FR4G-TP " << _Name << " attack " << target << " at range, causing " << _R_attack_damage << " points of damage" << std::endl;
-}
-
-void	FragTrap::meleeAttack(std::string const & target)
-{
-	std::cout << "FR4G-TP " << _Name << " attack " << target << " at melee, causing " << _M_attack_damage << " points of damage" << std::endl;
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	if (_Hit_points <= amount - _A_damage_reduction)
-	{
-		_Hit_points = 0;
-		std::cout << "Am I dead?" << std::endl;
-	}
-	else
-	{
-		_Hit_points -= (amount - _A_damage_reduction);
-		std::cout << "I bet your mom could do better!" << std::endl;
-	}
-	std::cout << "Hit point = " << _Hit_points << std::endl;
-}
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (_Hit_points == 0)
-		std::cout << "You can't keep a good 'bot down!" << std::endl;
-	if (_Hit_points + amount > _Max_hit_points)
-	{
-		_Hit_points = _Max_hit_points;
-		std::cout << "Ready to go on where you are, friend. I'm Full repair" << std::endl;
-	}
-	else
-	{
-		_Hit_points += amount;
-		std::cout << "Not full repair but let's go do some: Dance battle! Or, you know... regular battle." << std::endl;
-	}
-	std::cout << "Hit point = " << _Hit_points << std::endl;
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const & target)

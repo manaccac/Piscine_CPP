@@ -39,6 +39,7 @@ FragTrap &FragTrap::operator=(FragTrap const &F_Trap)
 	_M_attack_damage = F_Trap._M_attack_damage;
 	_R_attack_damage = F_Trap._R_attack_damage;
 	_A_damage_reduction = F_Trap._A_damage_reduction;
+	std::cout << "FragTrap assigne" << std::endl << "Directive one: Protect humanity! Directive two: Obey Jack at all costs. Directive three: Dance!" << std::endl;
 	return (*this);
 }
 

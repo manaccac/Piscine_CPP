@@ -39,6 +39,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &F_Trap)
 	_M_attack_damage = F_Trap._M_attack_damage;
 	_R_attack_damage = F_Trap._R_attack_damage;
 	_A_damage_reduction = F_Trap._A_damage_reduction;
+	std::cout << "ScavTrap assigne" << std::endl << "Look out everybody! Things are about to get awesome!" << std::endl;
 	return (*this);
 }
 
