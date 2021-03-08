@@ -55,19 +55,33 @@ int main()
 	std::cout << std::endl;
 
 	NinjaTrap ninja("N_manaccac");
+	std::cout << std::endl;
 	NinjaTrap *test = new NinjaTrap("ImTest");
+	std::cout << std::endl;
 	ninja.ninjaShoebox(ninja);
+	std::cout << std::endl;
 	ninja.meleeAttack("L'ane");
+	std::cout << std::endl;
 	ninja.rangedAttack("L'ane");
+	std::cout << std::endl;
 	ninja.takeDamage(24);
+	std::cout << std::endl;
 	ninja.beRepaired(50);
+	std::cout << std::endl;
 	ninja.takeDamage(42);
+	std::cout << std::endl;
 	ninja.takeDamage(100);
+	std::cout << std::endl;
 	ninja.beRepaired(125);
+	std::cout << std::endl;
 	ninja.ninjaShoebox(frag);
+	std::cout << std::endl;
 	ninja.ninjaShoebox(scav);
+	std::cout << std::endl;
 	ninja.ninjaShoebox(*test);
+	std::cout << std::endl;
 	ninja.ninjaShoebox(frag);
+	std::cout << std::endl;
 	delete test;
 	return 0;
 }
