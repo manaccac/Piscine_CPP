@@ -7,7 +7,7 @@ OBJ 	=	PhoneBook.o main.o
 
 all: $(NAME)
 
-%.o:%.c
+%.o:%.cpp
 	$(C) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJ)

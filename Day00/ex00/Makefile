@@ -6,7 +6,7 @@
 #    By: manaccac <manaccac@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 11:23:04 by manaccac          #+#    #+#              #
-#    Updated: 2021/02/24 11:23:05 by manaccac         ###   ########lyon.fr    #
+#    Updated: 2021/03/08 09:41:11 by manaccac         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJ 	=	megaphone.o
 
 all: $(NAME)
 
-%.o:%.c
+%.o:%.cpp
 	$(C) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJ)
