@@ -1,7 +1,7 @@
 #include "FragTrap.hpp"
 
 int main() {
-    FragTrap frag("Manaccac");
+	FragTrap frag("Manaccac");
 	std::cout << std::endl;
 	frag.vaulthunter_dot_exe("Shreck");
 	std::cout << std::endl;
@@ -27,5 +27,5 @@ int main() {
 	std::cout << std::endl;
 	frag.vaulthunter_dot_exe("Shreck");
 
-    return 0;
+	return 0;
 }
