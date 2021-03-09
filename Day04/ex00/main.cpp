@@ -32,5 +32,7 @@ int main()
 	std::cout << frfrey;
 	robert.polymorph(frfrey);
 
+	std::cout << std::endl;
+
 	return (0);
 }
