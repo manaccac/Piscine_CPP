@@ -10,10 +10,10 @@ Sorcerer::Sorcerer(Sorcerer const &wizar) : _Name(wizar._Name), _Title(wizar._Ti
 	std::cout << _Name << ", " << _Title << ", is born!" << std::endl;
 }
 
-Sorcerer	&Sorcerer::operator=(Sorcerer const &other)
+Sorcerer	&Sorcerer::operator=(Sorcerer const &wizare)
 {
-	_Name = other._Name;
-	_Title = other._Title;
+	_Name = wizare._Name;
+	_Title = wizare._Title;
 	std::cout << _Name << ", " << _Title << ", is born!" << std::endl;
 	return (*this);
 }
@@ -25,16 +25,21 @@ Sorcerer::~Sorcerer()
 
 std::string	Sorcerer::getName() const
 {
-	return(this->_Name);
+	return(_Name);
 }
 
 std::string	Sorcerer::getTitle() const
 {
-	return(this->_Title);
+	return(_Title);
 }
 
-std::ostream &operator<<(std::ostream &os, const Sorcerer &other)
+void	Sorcerer::polymorph(Victim const &vic) const
 {
-	os << "I am " << other.getName() << ", " << other.getTitle() << ", and I like ponies!" << std::endl;
+	vic.getPolymporphed();
+}
+
+std::ostream &operator<<(std::ostream &os, const Sorcerer &wizare)
+{
+	os << "I am " << wizare.getName() << ", " << wizare.getTitle() << ", and I like ponies!" << std::endl;
 	return (os);
 }
