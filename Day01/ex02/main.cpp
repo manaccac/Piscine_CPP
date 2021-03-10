@@ -1,16 +1,21 @@
-#include "ZombieEvent.hpp"
 #include "Zombie.hpp"
-#include <iostream>
+#include "ZombieEvent.hpp"
 
-int main() {
-    ZombieEvent *factory = new ZombieEvent();
+int main(void)
+{
+    Zombie  Mac = Zombie("Mac", "Slow-Walker");
+    Zombie  Nac = Zombie("Nac", "Fast-Walker");
 
-    factory->setZombieType("Zombie moche");
-    Zombie zombie1 = factory->randomChump();
-    factory->setZombieType("Zombie");
-    Zombie zombie2 = factory->randomChump();
-    factory->setZombieType("Zombie chauve");
-    Zombie zombie3 = factory->randomChump();
-    delete factory;
-    return (0);
+    Mac.advert();
+    Nac.advert();
+
+
+    ZombieEvent Zombie_H;
+
+    Zombie_H.setZombieType("Super-Fast-Walker");
+    Zombie *createdOnHeap = Zombie_H.newZombie("name");
+    for (int i = 0; i < 2; i++)
+        Zombie_H.randomChump();
+    createdOnHeap->advert();
+    delete createdOnHeap;
 }

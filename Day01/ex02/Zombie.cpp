@@ -4,11 +4,15 @@ Zombie::Zombie()
 {
 }
 
+Zombie::Zombie(std::string s_name, std::string s_type) : name(s_name), type(s_type)
+{
+}
+
 Zombie::~Zombie()
 {
 }
 
-void	Zombie::advret()
+void	Zombie::advert()
 {
 	std::cout << "< " << name << " (" << type << ") >" << " Braiiiiiiinnnssss ..."<< std::endl;
 }

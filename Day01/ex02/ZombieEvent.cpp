@@ -2,6 +2,7 @@
 
 ZombieEvent::ZombieEvent()
 {
+	srand (time(NULL));
 }
 
 ZombieEvent::~ZombieEvent()
@@ -13,17 +14,14 @@ void	ZombieEvent::setZombieType(std::string s_type)
 	type = s_type;
 }
 
-Zombie	ZombieEvent::newZombie(std::string name)
+Zombie*	ZombieEvent::newZombie(std::string name)
 {
-	Zombie N_Zombie = Zombie();
-	N_Zombie.set_name(name);
-	N_Zombie.set_type(type);
-
-	return(N_Zombie);
+	return(new Zombie(name, type));
 }
 
-Zombie	ZombieEvent::randomChump()
+Zombie	*ZombieEvent::randomChump()
 {
+	Zombie *N_Zombie;
 	int rand = (std::rand() % 6);
 
     std::string names[6];
@@ -33,8 +31,8 @@ Zombie	ZombieEvent::randomChump()
     names[3] = "Tgrangeo";
     names[4] = "Edepauw";
     names[5] = "Rpichon";
-	Zombie N_Zombie = newZombie(names[rand]);
-	N_Zombie.advret();
+	N_Zombie = new Zombie(names[rand], type);
+	N_Zombie->advert();
 
 	return(N_Zombie);
 }
