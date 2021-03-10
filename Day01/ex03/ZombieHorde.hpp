@@ -15,7 +15,7 @@ public:
 
 	void	randomname(Zombie * Zombies);
 	void	randomtype(Zombie * Zombies);
-	void	announce();
+	void	advert();
 private:
 	Zombie	newZombie (std::string name);
 	Zombie	*Zombies;

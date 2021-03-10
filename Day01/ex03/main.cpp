@@ -2,9 +2,9 @@
 #include "Zombie.hpp"
 #include <iostream>
 
-int main() {
-    ZombieHorde *horde = new ZombieHorde(10);
-    horde->announce();
-    delete horde;
+int main()
+{
+    ZombieHorde HordeCreator(10);
+    HordeCreator.advert();
     return (0);
 }

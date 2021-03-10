@@ -2,6 +2,7 @@
 
 ZombieHorde::ZombieHorde(int n)
 {
+	srand (time(NULL));
 	nb = n;
 	if (n < 0)
 		return ;
@@ -54,10 +55,10 @@ void	ZombieHorde::randomtype(Zombie * Zombies)
 	Zombies->set_type(types[rand]);
 }
 
-void	ZombieHorde::announce()
+void	ZombieHorde::advert()
 {
 	if (nb < 0)
 		return ;
 	for (int i = 0; i < nb; i++)
-		Zombies[i].announce();
+		Zombies[i].advert();
 }
