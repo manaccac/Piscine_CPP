@@ -18,5 +18,4 @@ int main()
 	jim.attack();
 	clubB.setType("some other type of club");
 	jim.attack();
-
 }
