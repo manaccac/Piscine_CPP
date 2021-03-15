@@ -14,7 +14,7 @@ public:
 	~ZombieEvent();
 
 	void	setZombieType(std::string s_type);
-	Zombie	*randomChump();
+	void	randomChump();
 	Zombie  *newZombie(std::string name);
 private:
 	std::string type;
