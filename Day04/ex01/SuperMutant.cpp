@@ -24,8 +24,12 @@ SuperMutant::~SuperMutant()
 
 void	SuperMutant::takeDamage(int amount)
 {
+	amount = amount - 3;
 	if (_HP - amount <= 0)
+	{
 		_HP = 0;
+		delete this;
+	}
 	else
 		_HP -= amount;
 }

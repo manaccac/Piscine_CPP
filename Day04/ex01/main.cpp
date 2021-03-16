@@ -1,23 +1,101 @@
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "Character.hpp"
+#include "Enemy.hpp"
+#include "RadScorpion.hpp"
+#include "SuperMutant.hpp"
+#include "Bouftou.hpp"
+#include "Fleche_explo.hpp"
 
-int main()
-{
-	Character* me = new Character("me");
-	std::cout << *me;
-	Enemy* b = new RadScorpion();
-	AWeapon* pr = new PlasmaRifle();
-	AWeapon* pf = new PowerFist();
-	me->equip(pr);
-	std::cout << *me;
-	me->equip(pf);
-	me->attack(b);
-	std::cout << *me;
-	me->equip(pr);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	return 0;
+int main() {
+    Character* moi = new Character("moi");
+    std::cout << *moi;
+
+    Enemy* b = new RadScorpion();
+    Enemy* m = new SuperMutant();
+    Enemy* B = new bouftou();
+
+    AWeapon* pr = new PlasmaRifle();
+    AWeapon* pf = new PowerFist();
+    AWeapon* F_e = new Fleche_explo();
+
+    moi->equip(pr);
+    std::cout << *moi;
+    moi->equip(pf);
+    moi->attack(b);
+    std::cout << *moi;
+    moi->equip(pr);
+    std::cout << *moi;
+    moi->attack(b);
+    std::cout << *moi;
+
+    moi->attack(m);
+    std::cout << *moi;
+
+    moi->attack(b);
+    std::cout << *moi;
+
+    moi->recoverAP();
+    moi->recoverAP();
+    moi->recoverAP();
+    moi->recoverAP();
+
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+    moi->attack(m);
+    std::cout << *moi;
+
+    std::cout << "Mutant life : " << m->getHP() << std::endl;
+
+    moi->recoverAP();
+	std::cout << *moi;
+    moi->recoverAP();
+	std::cout << *moi;
+    moi->recoverAP();
+	std::cout << *moi;
+    moi->recoverAP();
+
+    std::cout << *moi;
+	moi->equip(pf);
+    moi->attack(m);
+	moi->attack(m);
+	moi->attack(m);
+	moi->attack(m);
+	std::cout << *moi;
+	moi->attack(m);
+	std::cout << *moi;
+	moi->attack(m);
+    std::cout << *moi;
+
+
+    moi->recoverAP();
+    moi->recoverAP();
+    moi->recoverAP();
+    moi->recoverAP();
+
+    moi->equip(F_e);
+    std::cout << *moi;
+    moi->attack(B);
+	std::cout << *moi;
+	moi->attack(B);
+	std::cout << *moi;
+	moi->attack(B);
+    std::cout << *moi;
+
+    delete moi;
+    delete pr;
+    delete pf;
+    return (0);
 }

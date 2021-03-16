@@ -9,9 +9,9 @@ public:
 	Enemy(int s_hp, std::string const &s_type);
 	Enemy(Enemy const &enem);
 	Enemy &operator=(Enemy const &enem);
-	~Enemy();
+	virtual ~Enemy();
 
-	std::string	getType() const;
+	const std::string	getType() const;
 	int			getHP() const;
 	virtual void takeDamage(int amount);
 protected:

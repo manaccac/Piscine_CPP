@@ -1,5 +1,5 @@
-#ifndef AWEAPON.hpp
-#define AWEAPON.hpp
+#ifndef AWEAPON_HPP
+#define AWEAPON_HPP
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ public:
 	AWeapon(std::string const &s_name, int s_apcost, int s_damage);
 	AWeapon(AWeapon const &weapon);
 	AWeapon &operator=(AWeapon const &weapon);
-	~AWeapon();
+	virtual ~AWeapon();
 
 	std::string getName() const;
 	int getAPCost() const;

@@ -19,5 +19,5 @@ RadScorpion &RadScorpion::operator=(RadScorpion const &sup)
 
 RadScorpion::~RadScorpion()
 {
-	std::cout << "SPROTCH" << std::endl;
+	std::cout << "* SPROTCH *" << std::endl;
 }

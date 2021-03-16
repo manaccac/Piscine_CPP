@@ -21,7 +21,7 @@ Enemy::~Enemy()
 {
 }
 
-std::string	Enemy::getType() const
+const std::string	Enemy::getType() const
 {
 	return (_Type);
 }
@@ -34,7 +34,10 @@ int			Enemy::getHP() const
 void	Enemy::takeDamage(int amount)
 {
 	if (_HP - amount <= 0)
+	{
 		_HP = 0;
+		delete this;
+	}
 	else
 		_HP -= amount;
 }
