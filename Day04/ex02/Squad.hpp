@@ -14,7 +14,7 @@ public:
 
 	int getCount() const;
 	ISpaceMarine* getUnit(int i) const;
-	int push(ISpaceMarine*);
+	int push(ISpaceMarine* Space_M);
 private:
 	int	_count;
 	ISpaceMarine** _unit;

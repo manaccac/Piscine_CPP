@@ -40,17 +40,17 @@ ISpaceMarine	*Squad::getUnit(int i) const
 	return (_unit[i]);
 }
 
-int Squad::push(ISpaceMarine* Tp)
+int Squad::push(ISpaceMarine* Space_M)
 {
-	if (Tp)
+	if (Space_M)
 	{
 		for (int i = 0; i < _count; i++)
-			if (_unit[i] == Tp)
+			if (_unit[i] == Space_M)
 				return (_count);
 		ISpaceMarine **tmp = new ISpaceMarine*[_count + 1];
 		for (int i = 0; i < _count; i++)
 			tmp[i] = _unit[i];
-		tmp[_count] = Tp;
+		tmp[_count] = Space_M;
 		delete [] _unit;
 		_unit = tmp;
 		_count++;
