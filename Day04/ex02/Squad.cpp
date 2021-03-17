@@ -14,7 +14,6 @@ Squad &Squad::operator=(Squad const &s_squad)
 {
 	for (int i = 0; i < _count; i++)
 		delete _unit[i];
-	delete [] _unit;
 	_count = 0;
 	for (int i = 0; i < _count; i++)
 		push(s_squad.getUnit(i)->clone());
