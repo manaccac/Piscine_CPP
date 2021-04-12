@@ -19,14 +19,15 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &bur) const
 {
 	if (bur.getGrade() > getCanExec())
 	{
-		throw GradeTooLowException();
+		std::cout << " cant execute this Form beacause grade is to low" << std::endl;
 		return ;
 	}
 	else if (getSign() == false)
 	{
-		throw FormNotSign();
+		std::cout << " cant execute this Form beacause this Form is not signed" << std::endl;
 		return ;
 	}
+
 	std::stringstream file_name;
 
 	file_name << _target << "_shrubbery";

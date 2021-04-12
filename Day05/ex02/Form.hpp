@@ -12,7 +12,7 @@ public:
 	Form(const std::string s_name, int s_canSign, int s_canExec);
 	Form(Form const &s_Form);
 	Form &operator=(Form const &s_Form);
-	~Form();
+	virtual ~Form();
 
 	std::string getName() const {return (_name);};
 	bool		getSign() const {return (_sign);};
