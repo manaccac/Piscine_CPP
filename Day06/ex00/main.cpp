@@ -72,15 +72,16 @@ void	conv_double(double long dl)
 int main(int argc, char **argv)
 {
 	if (argc != 2)
+	{
 		std::cout << "Erreur ARG" << std::endl;
+		return (0);
+	}
 
 	std::string val = argv[1];
 
 	if (val.length() == 1)
 	{
 		double long dl = static_cast<int> (val[0]);
-		std::cout << val[0] << std::endl;
-		std::cout << dl << std::endl;
 		if (dl == 48)
 			dl = 0;
 		conv_char(dl);
@@ -93,7 +94,6 @@ int main(int argc, char **argv)
 		double long dl;
 		char* pEnd;
 		dl = std::strtod(val.c_str(), &pEnd);
-		//std::cout << dl << std::endl;
 		conv_char(dl);
 		conv_int(dl);
 		conv_float(dl);
