@@ -13,6 +13,8 @@ public:
 	{
 		_size = n;
 		_array = new T[n];
+		for (unsigned int i = 0; i < _size; i++)
+            _array[i] = T();
 	}
 
 	Array(Array const & s_array)
