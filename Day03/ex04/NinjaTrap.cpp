@@ -1,6 +1,6 @@
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap() : ClapTrap("Default", 60, 60, 120, 120, 1, 60, 5, 0)
+NinjaTrap::NinjaTrap() : ClapTrap("deafault", 60, 60, 120, 120, 1, 60, 5, 0)
 {
 	std::cout << "NinjaTrap creat" << std::endl << "Recompiling my combat code!" << std::endl;
 }
@@ -53,6 +53,30 @@ void NinjaTrap::ninjaShoebox(const NinjaTrap &N_trap)
 	{
 		_Energy_points -= 25;
     	std::cout << _Name << " You are real Ninja " << N_trap.getName() << std::endl;
+	}
+	std::cout << "Energy = " << _Energy_points << std::endl;
+}
+
+void NinjaTrap::ninjaShoebox(const FragTrap &N_trap)
+{
+	if (_Energy_points < 25)
+		std::cout << "No Energy i don't know if you are a real Ninja" << std::endl;
+	else
+	{
+		_Energy_points -= 25;
+    	std::cout << _Name << " You are not a Ninja " << N_trap.getName() << " you are just an old FragTrap"<< std::endl;
+	}
+	std::cout << "Energy = " << _Energy_points << std::endl;
+}
+
+void NinjaTrap::ninjaShoebox(const ScavTrap &N_trap)
+{
+	if (_Energy_points < 25)
+		std::cout << "No Energy i don't know if you are a real Ninja" << std::endl;
+	else
+	{
+		_Energy_points -= 25;
+    	std::cout << _Name << " You are not a Ninja " << N_trap.getName() << " Nice try but you are ScavTrap" << std::endl;
 	}
 	std::cout << "Energy = " << _Energy_points << std::endl;
 }

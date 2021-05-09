@@ -106,8 +106,6 @@ int main()
 	std::cout << std::endl;
 	sup.beRepaired(125);
 	std::cout << std::endl;
-	sup.ninjaShoebox(sup);
-	std::cout << std::endl;
 	sup.ninjaShoebox(scav);
 	std::cout << std::endl;
 	sup.vaulthunter_dot_exe("spider");
