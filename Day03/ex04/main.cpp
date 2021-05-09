@@ -7,11 +7,11 @@ int main()
 {
 	FragTrap frag("F_manaccac");
 	std::cout << std::endl;
-	frag.vaulthunter_dot_exe("Shreck");
+	frag.vaulthunter_dot_exe("Shrek");
 	std::cout << std::endl;
-	frag.meleeAttack("Shreck");
+	frag.meleeAttack("Shrek");
 	std::cout << std::endl;
-	frag.rangedAttack("Shreck");
+	frag.rangedAttack("Shrek");
 	std::cout << std::endl;
 	frag.takeDamage(24);
 	std::cout << std::endl;
@@ -23,13 +23,13 @@ int main()
 	std::cout << std::endl;
 	frag.beRepaired(125);
 	std::cout << std::endl;
-	frag.vaulthunter_dot_exe("Shreck");
+	frag.vaulthunter_dot_exe("Shrek");
 	std::cout << std::endl;
-	frag.vaulthunter_dot_exe("Shreck");
+	frag.vaulthunter_dot_exe("Shrek");
 	std::cout << std::endl;
-	frag.vaulthunter_dot_exe("Shreck");
+	frag.vaulthunter_dot_exe("Shrek");
 	std::cout << std::endl;
-	frag.vaulthunter_dot_exe("Shreck");
+	frag.vaulthunter_dot_exe("Shrek");
 	std::cout << std::endl;
 
 	ScavTrap scav("S_manaccac");
