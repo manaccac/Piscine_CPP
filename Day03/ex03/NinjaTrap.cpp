@@ -52,6 +52,30 @@ void NinjaTrap::ninjaShoebox(const NinjaTrap &N_trap)
 	std::cout << "Energy = " << _Energy_points << std::endl;
 }
 
+void NinjaTrap::ninjaShoebox(const FragTrap &N_trap)
+{
+	if (_Energy_points < 25)
+		std::cout << "No Energy i don't know if you are a real Ninja" << std::endl;
+	else
+	{
+		_Energy_points -= 25;
+    	std::cout << _Name << " You are not a Ninja " << N_trap.getName() << " you are just an old FragTrap"<< std::endl;
+	}
+	std::cout << "Energy = " << _Energy_points << std::endl;
+}
+
+void NinjaTrap::ninjaShoebox(const ScavTrap &N_trap)
+{
+	if (_Energy_points < 25)
+		std::cout << "No Energy i don't know if you are a real Ninja" << std::endl;
+	else
+	{
+		_Energy_points -= 25;
+    	std::cout << _Name << " You are not a Ninja " << N_trap.getName() << " Nice try but you are ScavTrap" << std::endl;
+	}
+	std::cout << "Energy = " << _Energy_points << std::endl;
+}
+
 void NinjaTrap::ninjaShoebox(const ClapTrap &C_trap)
 {
 	if (_Energy_points < 25)
