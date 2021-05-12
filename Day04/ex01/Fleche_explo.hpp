@@ -9,7 +9,7 @@ public:
 	Fleche_explo();
 	Fleche_explo(Fleche_explo const& fleche);
 	Fleche_explo &operator=(Fleche_explo const& fleche);
-	~Fleche_explo();
+	virtual ~Fleche_explo();
 
 	void attack() const;
 private:
