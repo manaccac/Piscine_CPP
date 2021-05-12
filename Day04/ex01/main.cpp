@@ -95,7 +95,10 @@ int main() {
     std::cout << *moi;
 
     delete moi;
+
     delete pr;
     delete pf;
+    delete F_e;
+
     return (0);
 }

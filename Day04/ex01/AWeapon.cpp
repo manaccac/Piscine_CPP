@@ -23,7 +23,7 @@ AWeapon::~AWeapon()
 {
 }
 
-std::string	AWeapon::getName() const
+std::string const	AWeapon::getName() const
 {
 	return (_Name);
 }

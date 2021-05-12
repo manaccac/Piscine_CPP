@@ -63,7 +63,7 @@ void	Character::attack(Enemy *ad)
 	ad->takeDamage(_Weapon->getDamage());
 }
 
-std::string	Character::getName() const
+std::string const	Character::getName() const
 {
 	return (_Name);
 }
