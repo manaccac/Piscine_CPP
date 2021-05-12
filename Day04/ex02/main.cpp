@@ -6,8 +6,8 @@
 
 int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	std::cout << std::endl << "\033[35m************************* GIVEN TEST" \
-		" **************\033[m" << std::endl << std::endl;
+	std::cout << std::endl << "************************* GIVEN TEST" \
+		" **************" << std::endl << std::endl;
 	{
 		ISpaceMarine* bob = new TacticalMarine;
 		ISpaceMarine* jim = new AssaultTerminator;
@@ -24,9 +24,7 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		delete vlc;
 	}
 
-	std::cout << std::endl << "\033[35m************************* MY TEST" \
-		" **************" << std::endl;
-	std::cout << std::endl << "\033[35mTEST 1): empty squad\033[m"\
+	std::cout << std::endl << "TEST 1): empty squad"\
 		<< std::endl;
 	{
 		Squad Bataillion;
@@ -35,14 +33,14 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		std::cout << Bataillion.getUnit(0) << std::endl;
 		std::cout << Bataillion.getUnit(1) << std::endl;
 	}
-	std::cout << std::endl << "\033[35mTEST 2): adding to squad 1 recruit\033[m"\
+	std::cout << std::endl << "TEST 2): adding to squad 1 recruit"\
 		<< std::endl;
 	{
 		Squad Bataillion;
 		ISpaceMarine *boby = new TacticalMarine;
 		Bataillion.push(boby);
 	}
-	std::cout << std::endl << "\033[35mTEST 3): adding to squad clone recruits only\033[m"\
+	std::cout << std::endl << "TEST 3): adding to squad clone recruits only"\
 		<< std::endl;
 	{
 		Squad Bataillion;
@@ -54,8 +52,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		std::cout << std::endl;
 		delete jhonny;
 	}
-	std::cout << std::endl << "\033[35mTEST 4): adding to a squad twice the" \
-		" same unit, or NULL\033[m" << std::endl;
+	std::cout << std::endl << "TEST 4): adding to a squad twice the" \
+		" same unit, or NULL" << std::endl;
 	{
 		Squad Bataillion;
 		ISpaceMarine *jhonny = new AssaultTerminator;
@@ -65,8 +63,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		Bataillion.push(NULL);
 		std::cout << std::endl;
 	}
-	std::cout << std::endl << "\033[35mTEST 5): creating a squad by copy" \
-		"\033[m" << std::endl;
+	std::cout << std::endl << "TEST 5): creating a squad by copy" \
+		"" << std::endl;
 	{
 		ISpaceMarine *jhonny = new AssaultTerminator;
 		Squad Bataillion1;
@@ -76,8 +74,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		std::cout << std::endl;
 		delete jhonny;
 	}
-	std::cout << std::endl << "\033[35mTEST 6): copying a squad into another" \
-		" squad that already had data in it... no LEAKS!\033[m" << std::endl;
+	std::cout << std::endl << "TEST 6): copying a squad into another" \
+		" squad that already had data in it... no LEAKS!" << std::endl;
 	{
 		ISpaceMarine *jhonny = new AssaultTerminator;
 		Squad Bataillion1;
