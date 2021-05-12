@@ -58,7 +58,7 @@ void	Character::attack(Enemy *ad)
 	}
 	_AP -= _Weapon->getAPCost();
 	_Enemy = ad;
-	std::cout << getName() << " attacks " << ad->getType() << "with a " << _Weapon->getName() << std::endl;
+	std::cout << getName() << " attacks " << ad->getType() << " with a " << _Weapon->getName() << std::endl;
 	_Weapon->attack();
 	ad->takeDamage(_Weapon->getDamage());
 }
