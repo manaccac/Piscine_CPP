@@ -74,17 +74,17 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		std::cout << std::endl;
 		delete jhonny;
 	}
-	std::cout << std::endl << "TEST 6): copying a squad into another" \
-		" squad that already had data in it... no LEAKS!" << std::endl;
+	std::cout << std::endl << "TEST 6): assignation"\
+		<< std::endl;
 	{
-		ISpaceMarine *jhonny = new AssaultTerminator;
-		Squad Bataillion1;
-		Squad Bataillion2;
-		Bataillion1.push(jhonny->clone());
-		Bataillion2.push(jhonny->clone());
-		Bataillion2 = Bataillion1;
+		Squad Bataillion;
+		ISpaceMarine *boby = new TacticalMarine;
+		Bataillion.push(boby);
+		Bataillion.push(boby->clone());
 		std::cout << std::endl;
-		delete jhonny;
+		Squad Bataillion1(Bataillion);
+		Bataillion1.getCount();
+		std::cout << std::endl;
 	}
 	return (0);
 }

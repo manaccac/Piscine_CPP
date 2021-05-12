@@ -4,10 +4,21 @@ Squad::Squad() : _count(0), _unit(NULL)
 {
 }
 
-Squad::Squad(Squad const &s_squad) : _count(0), _unit(NULL)
+Squad::Squad(Squad const &s_squad)
 {
-	for (int i = 0; i < _count; i++)
-		push(s_squad.getUnit(i)->clone());
+
+	if (s_squad.getCount())
+	{
+		_unit = new ISpaceMarine*[s_squad.getCount()];
+		for (int i = 0; i < s_squad.getCount(); i++)
+			_unit[i] = s_squad.getUnit(i)->clone();
+		_count = s_squad.getCount();
+	}
+	else
+	{
+		_count = 0;
+		_unit = NULL;
+	}
 }
 
 Squad &Squad::operator=(Squad const &s_squad)
