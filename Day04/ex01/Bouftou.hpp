@@ -10,7 +10,7 @@ public:
 	bouftou();
 	bouftou(bouftou const &s_bouftou);
 	bouftou &operator=(bouftou const &s_bouftou);
-	~bouftou();
+	virtual ~bouftou();
 private:
 };
 

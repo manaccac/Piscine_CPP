@@ -9,7 +9,7 @@ public:
 	RadScorpion();
 	RadScorpion(RadScorpion const& sup);
 	RadScorpion &operator=(RadScorpion const& sup);
-	~RadScorpion();
+	virtual ~RadScorpion();
 private:
 };
 

@@ -9,7 +9,7 @@ public:
 	SuperMutant();
 	SuperMutant(SuperMutant const& sup);
 	SuperMutant &operator=(SuperMutant const& sup);
-	~SuperMutant();
+	virtual ~SuperMutant();
 
 	void	takeDamage(int amount);
 private:
