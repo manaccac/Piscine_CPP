@@ -13,25 +13,31 @@ Character::Character(std::string const s_name) : _name(s_name)
 		_spell[i] = NULL;
 }
 
-Character::Character(Character const &s_chara) : _name(s_chara._name)
+Character::Character(Character const &s_chara)
 {
-	for (int i = 0; i != 4; i++)
-		_spell[i] = NULL;
+	*this = s_chara;
 }
 
 Character &Character::operator=(Character const &s_chara)
 {
 	_name = s_chara._name;
 	for (int i = 0; i != 4; i++)
+	{
 		_spell[i] = NULL;
+	}
+	int i = 0;
+	while (s_chara._spell[i])
+	{
+		_spell[i] = s_chara._spell[i];
+		i++;
+	}
+
+
 	return (*this);
 }
 
 Character::~Character()
 {
-	for (int i = 0; i != 4; i++)
-		if (_spell[i])
-			delete _spell[i];
 }
 
 std::string const &Character::getName() const
@@ -46,6 +52,7 @@ void	Character::equip(AMateria *m)
 		if (!_spell[i])
 		{
 			_spell[i] = m;
+			std::cout << "equipe OK" << std::endl;
 			break;
 		}
 	}
@@ -54,7 +61,13 @@ void	Character::equip(AMateria *m)
 void	Character::unequip(int idx)
 {
 	if (idx >= 0 && idx <= 3)
-		_spell[idx] = NULL;
+	{
+		if (_spell[idx])
+		{
+			std::cout << "unequipe idx = " << idx << " OK" << std::endl;
+			_spell[idx] = NULL;
+		}
+	}
 }
 
 void	Character::use(int idx, ICharacter &target)

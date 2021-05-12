@@ -35,6 +35,7 @@ void	MateriaSource::learnMateria(AMateria *s_spell)
 	{
 		if (!_spell[i])
 		{
+			std::cout << "succeffully learned id = " << i << " OK" << std::endl;
 			_spell[i] = s_spell;
 			break;
 		}
