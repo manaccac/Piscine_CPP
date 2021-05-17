@@ -5,7 +5,7 @@ int main() {
     // Check error constructor
     for (int i = -5; i < 155; i++)
         if (i < 5 || i > 145) {
-            std::cout << "Grade : " << i << " : ";
+            std::cout << "Grade : " << i << " : " << std::endl;
             try {
                 Bureaucrat a = Bureaucrat("A", i);
             } catch(const std::exception& e) { std::cerr << e.what() << '\n'; }
@@ -35,7 +35,7 @@ int main() {
         } catch(const std::exception& e) { std::cerr << e.what() << '\n'; }
     }
 
-    std::cout << " ------ " << std::endl;
+    std::cout << "\n ------ Formulaire ------\n" << std::endl;
 
     Form f = Form("formulaire_a", 5, 5);
 

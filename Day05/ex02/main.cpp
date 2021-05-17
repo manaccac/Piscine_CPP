@@ -12,11 +12,11 @@
 
 int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	std::cout << std::endl << "\033[35m************************* MY TESTS" \
+	std::cout << std::endl << "************************* MY TESTS" \
 		" **************" << std::endl;
 	//TEST 1)
-	std::cout << std::endl << "\033[35mTEST 1) "
-		"instanciating ShrubberyCreationForm with target maison\033[m" \
+	std::cout << std::endl << "TEST 1) "
+		"instanciating ShrubberyCreationForm with target maison" \
 		<< std::endl << std::endl;
 	{
 		Form	*form1 = new ShrubberyCreationForm("maison");
@@ -25,8 +25,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		delete form1;
 	}
 	//TEST 2)
-	std::cout << std::endl << "\033[35mTEST 2) "
-		"instanciating ShrubberyCreationForm and executing without signing it.\033[m" \
+	std::cout << std::endl << "TEST 2) "
+		"instanciating ShrubberyCreationForm and executing without signing it." \
 		<< std::endl << std::endl;
 	{
 		Bureaucrat Charlie("Charlie", 1);
@@ -48,8 +48,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		delete form1;
 	}
 	//TEST 3)
-	std::cout << std::endl << "\033[35mTEST 3) "
-		"instanciating PresidentialPardonForm and get the bureaucrat to execute it\033[m" \
+	std::cout << std::endl << "TEST 3) "
+		"instanciating PresidentialPardonForm and get the bureaucrat to execute it" \
 		<< std::endl << std::endl;
 	{
 		Bureaucrat Charlie("Charlie", 6);
@@ -64,8 +64,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		delete form1;
 	}
 	//TEST 4)
-	std::cout << std::endl << "\033[35mTEST 4) "
-		"instanciating RobotomyRequestForm and get the bureaucrat to execute it\033[m" \
+	std::cout << std::endl << "TEST 4) "
+		"instanciating RobotomyRequestForm and get the bureaucrat to execute it" \
 		<< std::endl << std::endl;
 	{
 		Bureaucrat Charlie("Charlie", 46);

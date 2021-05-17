@@ -39,7 +39,6 @@ Form *Intern::makeForm(std::string name_form, std::string targ_form)
 	Form *copy = NULL;
 	for (int i = 0; i != 3; i++)
 	{
-		std::cout << "bleu" << std::endl;
 		if (name_form == _list_form[i])
 		{
 			copy = (this->*constr[i])(targ_form);

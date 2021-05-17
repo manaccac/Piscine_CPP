@@ -10,11 +10,11 @@
 
 int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
-	std::cout << std::endl << "\033[35m************************* MY TESTS" \
+	std::cout << std::endl << "************************* MY TESTS" \
 		" **************" << std::endl;
 	//TEST 1)
-	std::cout << std::endl << "\033[35mTEST 1) "
-		"instanciating Intern and try to make him create forms with mispeal\033[m" \
+	std::cout << std::endl << "TEST 1) "
+		"instanciating Intern and try to make him create forms with mispeal" \
 		<< std::endl << std::endl;
 	{
 		Intern Pesant;
@@ -23,8 +23,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		Pesant.makeForm("presidential pardoN", "my_target");
 	}
 	//TEST 2)
-	std::cout << std::endl << "\033[35mTEST 2) "
-		"instanciating Intern and try to make him create 3 forms\033[m" \
+	std::cout << std::endl << "TEST 2) "
+		"instanciating Intern and try to make him create 3 forms" \
 		<< std::endl << std::endl;
 	{
 		Intern Pesant;
@@ -39,8 +39,8 @@ int	main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 		delete form3;
 	}
 	//TEST 3)
-	std::cout << std::endl << "\033[35mTEST 3) "
-		"now just check those form can be signed.\033[m" \
+	std::cout << std::endl << "TEST 3) "
+		"now just check those form can be signed." \
 		<< std::endl << std::endl;
 	{
 		Bureaucrat Charlie("Charlie", 1);
