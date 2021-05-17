@@ -1,14 +1,24 @@
-SRCS=main.cpp
-NAME=convert
+NAME 	=	convert
+SRC 	=	main.cpp
+RM 		=	rm -fclean
+C 		=	clang++
+FLAGS 	=	-Wall -Wextra -Werror -Wconversion -std=c++98
+OBJ 	=	${SRC:.cpp=.o}
 
-all:	$(NAME)
+all: $(NAME)
 
-$(NAME):	$(SRCS)
-	clang++ -o $(NAME) $(SRCS) -Wall -Werror -Wextra -std=c++98 -fsanitize=address -g3
+$(OBJ): %.o:%.cpp
+	$(C) $(FLAGS) -o $@ -c $<
+
+$(NAME): $(OBJ)
+	$(C) -o $(NAME) $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
 
 re:	fclean all
 
-fclean:
-	rm -rf $(NAME)
-
-.PHONY: all re fclean
+.PHONY: all clean fclean re
