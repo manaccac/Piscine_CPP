@@ -9,26 +9,6 @@
 int     main(int argc __attribute__((unused)), char **argv __attribute__((unused)))
 {
 
-        std::cout << std::endl << "************************* SUBJECT TEST" \
-                " **************" << std::endl;
-        {
-                IMateriaSource *src = new MateriaSource();
-                src->learnMateria(new Ice());
-                src->learnMateria(new Cure());
-                ICharacter* moi = new Character("moi");
-                AMateria* tmp;
-                tmp = src->createMateria("ice");
-                moi->equip(tmp);
-                tmp = src->createMateria("cure");
-                moi->equip(tmp);
-                ICharacter* bob = new Character("bob");
-                moi->use(0, *bob);
-                moi->use(1, *bob);
-                delete bob;
-                delete moi;
-                delete src;
-        }
-
         std::cout << std::endl << "************************* MY TEST" \
                 " **************" << std::endl;
         std::cout << std::endl << "TEST 1): creating materia"\
@@ -67,10 +47,11 @@ int     main(int argc __attribute__((unused)), char **argv __attribute__((unused
                 << std::endl;
         {
                 Character       Charlie("charlie");
-                Charlie.equip(new Ice);
-                Charlie.equip(new Ice);
-                Charlie.equip(new Ice);
-                Charlie.equip(new Ice);
+                Ice                     AMateriaIce;
+                Charlie.equip(&AMateriaIce);
+                Charlie.equip(&AMateriaIce);
+                Charlie.equip(&AMateriaIce);
+                Charlie.equip(&AMateriaIce);
                 Cure                    Dummy;
                 Charlie.equip(&Dummy);
                 Charlie.equip(&Dummy);
@@ -80,7 +61,7 @@ int     main(int argc __attribute__((unused)), char **argv __attribute__((unused
         {
                 Character       Charlie("charlie");
                 Ice                     AMateriaIce;
-                Charlie.equip(new Ice);
+                Charlie.equip(&AMateriaIce);
                 Charlie.unequip(5);
                 Charlie.unequip(-1);
                 Charlie.unequip(0);
@@ -104,9 +85,11 @@ int     main(int argc __attribute__((unused)), char **argv __attribute__((unused
         {
                 Character       Charlie("charlie");
                 Character       Victim("Victim");
-                Charlie.equip(new Ice);
-                Charlie.equip(new Cure);
-                Charlie.equip(new Ice);
+                Ice                     AMateriaIce;
+                Cure                     AMateriaCure;
+                Charlie.equip(&AMateriaIce);
+                Charlie.equip(&AMateriaCure);
+                Charlie.equip(&AMateriaIce);
                 Charlie.use(0, Victim);
                 Charlie.use(1, Victim);
                 Charlie.use(2, Victim);
@@ -119,9 +102,11 @@ int     main(int argc __attribute__((unused)), char **argv __attribute__((unused
                 << std::endl;
         {
                 Character       Charlie("charlie");
-                Charlie.equip(new Ice);
-                Charlie.equip(new Cure);
-                Charlie.equip(new Ice);
+                Ice                     AMateriaIce;
+                Cure                     AMateriaCure;
+                Charlie.equip(&AMateriaIce);
+                Charlie.equip(&AMateriaCure);
+                Charlie.equip(&AMateriaIce);
                 Character       Victim(Charlie);
                 Victim.use(1, Charlie);
         }
