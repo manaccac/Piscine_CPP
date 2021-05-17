@@ -12,3 +12,4 @@ fclean:
 	rm -rf $(NAME)
 
 .PHONY: all re fclean
+
