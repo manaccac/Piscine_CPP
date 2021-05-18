@@ -13,7 +13,7 @@ std::string	genRandomString(const int len)
 {
     std::string randomString;
     const char randomCharArr[] = "aqwsedrftgyhujikolpmznxvc210367489QSZACWDEBFVRTGMNHYLJPUIKO";
-    
+
     randomString.reserve(len);
     for (int i = 0; i < len; ++i)
         randomString += randomCharArr[rand() % (sizeof(randomCharArr) - 1)];
@@ -30,14 +30,14 @@ void	outputData(Data *data)
 void	*serialize(void)
 {
 	std::cout << "Serializing" << std::endl;
-	
+
 	Data *data = new Data;
-	
+
 	data->s1 = new std::string;
 	*data->s1 = genRandomString(8);
-	
+
 	data->i = rand();
-	
+
 	data->s2 = new std::string;
 	*data->s2 = genRandomString(8);
 
@@ -63,7 +63,7 @@ int		main()
 	void *raw;
 
 	srand(time(NULL));
-	
+
 	raw = serialize();
 	data = deserialize(raw);
 
@@ -71,4 +71,5 @@ int		main()
 	delete data->s2;
 	delete data;
 	return 0;
+
 }
