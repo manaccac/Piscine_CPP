@@ -37,7 +37,7 @@ public:
 
 	~Array()
 	{
-		if (_array)
+		if (_array != NULL)
 			delete [] _array;
 	}
 
