@@ -15,8 +15,8 @@ int main()
 	{
 		std::cout << "MAX and MIN" << std::endl;
 		Span sp = Span(2);
-		sp.addNumber(INT32_MAX);
-		sp.addNumber(INT32_MIN);
+		sp.addNumber(2147483647);
+		sp.addNumber(-2147483648);
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 	}
@@ -130,5 +130,5 @@ int main()
 			std::cerr << e.what() << std::endl << std::endl;
 		}
 	}
-	return (0);	
+	return (0);
 }
