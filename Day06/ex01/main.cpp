@@ -3,9 +3,9 @@
 
 struct Data
 {
-	std::string	*s1;
+	std::string	s1;
 	int			i;
-	std::string	*s2;
+	std::string	s2;
 };
 
 
@@ -22,9 +22,9 @@ std::string	genRandomString(const int len)
 
 void	outputData(Data *data)
 {
-	std::cout << "first string  : |" << *data->s1 << "|" << std::endl;
+	std::cout << "first string  : |" << data->s1 << "|" << std::endl;
 	std::cout << "int           : |" << data->i << "|" << std::endl;
-	std::cout << "second string : |" << *data->s2 << "|" << std::endl;
+	std::cout << "second string : |" << data->s2 << "|" << std::endl;
 }
 
 void	*serialize(void)
@@ -33,13 +33,11 @@ void	*serialize(void)
 
 	Data *data = new Data;
 
-	data->s1 = new std::string;
-	*data->s1 = genRandomString(8);
+	data->s1 = genRandomString(8);
 
 	data->i = rand();
 
-	data->s2 = new std::string;
-	*data->s2 = genRandomString(8);
+	data->s2 = genRandomString(8);
 
 	outputData(data);
 
@@ -67,8 +65,6 @@ int		main()
 	raw = serialize();
 	data = deserialize(raw);
 
-	delete data->s1;
-	delete data->s2;
 	delete data;
 	return 0;
 
